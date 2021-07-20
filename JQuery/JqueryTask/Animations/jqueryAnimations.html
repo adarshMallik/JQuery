@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        section{
+            border: 1px solid blue;
+            margin-bottom: 30px;
+        }
+        h1{
+            background-color: chocolate;
+            height:40px;
+            margin: 0;
+        }
+        #icons{
+            float: right;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1 id="jquery">Toggle animation<span><i class='fa fa-angle-double-down' id="icons"></i></span></h1>
+    <p style="display: none;" id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores amet harum sequi ut animi eum dolorum dolor blanditiis et laboriosam!</p>
+    </section>
+    <section>
+        <h1>Show Hide animation<a><i class='fa fa-angle-double-down show' id="icons"></i>
+        <i class='fa fa-angle-double-up hide' id="icons"></i></a></h1>
+        <p id="para" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </section>
+
+    <section>
+        <h1>Fade TOGGLE/IN/OUT animation<a><i class='fa fa-angle-double-down in' id="icons"></i>
+        <i class='fa fa-angle-double-up out' id="icons"></i>
+        <i class='fa fa-arrows-v toggle' id="icons"></i></a></h1>
+        <p id="para1" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim officia placeat cum obcaecati sequi ea, sit libero quas nihil deserunt suscipit rem dicta rerum saepe!.</p>
+    </section>
+
+    <section>
+        <h1>Slide TOGGLE/UP/DOWN animation<a><i class='fa fa-angle-double-down down' id="icons"></i>
+        <i class='fa fa-angle-double-up up' id="icons"></i>
+        <i class='fa fa-arrows-v slidetoggle' id="icons"></i></a></h1>
+        <p id="para2" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim officia placeat cum obcaecati sequi ea, sit libero quas nihil deserunt suscipit rem dicta rerum saepe!.</p>
+    </section>
+
+    <section>
+        <h1 id="paraSelector">Slide animation</h1>
+        <p style="display: show;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim officia placeat cum obcaecati sequi ea, sit libero quas nihil deserunt suscipit rem dicta rerum saepe!.</p>
+
+        <p class="para3" style="display: show;"><b>Lorem ipsum dolor sit amet consectetur adipisicing</b></p>
+    </section>
+    
+    <section>
+        <ul>
+            <li>One
+                <ul>
+                    <li>1.1</li>
+                    <li>1.2</li>
+                    <li>1.3</li>
+                </ul>
+            </li>
+            <li>Two</li>
+            <li>Three
+                <ul>
+                    <li>3.1</li>
+                    <li>3.2</li>
+                    <li>3.3</li>
+                </ul>
+            </li>
+            <li>Four</li>
+            <li>Five</li>
+            
+        </ul>
+
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li class="third-item">list item 3
+                <ul>
+                    <li>sub item 3.1</li>
+                    <li>sub item 3.1</li>
+                    <li>sub item 3.1</li>
+                    <li>sub item 3.1</li>
+                </ul>
+            </li>
+            <li>list item 4</li>
+        </ul>
+    </section>
+    <script>
+        // sibling
+        $("li.third-item").siblings().css("background-color","red")
+
+        //$(".third-item").siblings().css("display","none");
+
+        // toggle
+      $(function(){
+           $('#jquery').click(function(){
+               $('#p1').toggle();
+           })
+      })
+
+      // show and hide methods
+
+        $('.show').click(function(){
+            $('#para').show(1000)  
+        })
+        $('.hide').click(function(){
+                $('#para').hide(1000)
+        })
+
+        //fadein and fadeout
+
+        $(function(){
+            $('.in').click(function(){
+               $('#para1').fadeIn(1000)
+            })
+            $('.out').click(function(){
+               $('#para1').fadeOut(1000)
+            })
+            $('.toggle').click(function(){
+               $('#para1').fadeToggle(1000)
+            })
+        })
+
+        $(function(){
+            $('.down').click(function(){
+               $('#para2').slideDown(1000)
+            })
+            $('.up').click(function(){
+               $('#para2').slideUp(1000)
+            })
+            $('.slidetoggle').click(function(){
+               $('#para2').slideToggle(1000)
+            })
+        })
+    
+        // firstcontent selector
+
+        $("#paraSelector").click(function(){
+               $("#paraSelector + p").slideToggle(1000)
+        })
+
+        //Siblings
+    $(function(){
+        $("ul li").click(function(){
+            $(this).siblings().find('ul').hide();
+            $(this).find('ul').toggle();
+        })
+    })
+
+        </script>
+</body>
+</html>

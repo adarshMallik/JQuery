@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion animation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        section{
+            border: 1px solid rgb(33, 33, 102);
+        }
+        h1{
+            background-color: chocolate;
+            height:40px
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <h1 id="jquery">What is JQuery</h1>
+    <p style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores amet harum sequi ut animi eum dolorum dolor blanditiis et laboriosam!</p>
+    </section>
+    
+    <script>
+        // shortcut of writing function
+      $(function(){
+           $('#jquery').click(function(){
+               $('p').toggle();
+           })
+      })
+        // list of animation methods
+        // 1) show()
+        // 2) hide()
+        // 3) toggle()
+        // 4) slideup()
+        // 5) slidedown()
+        // 6) slidetoggle()
+        // 7) fadein()
+        // 8) fadeout()
+        // 9) fadetoggle()
+        // 10) animation
+        </script>
+</body>
+</html>

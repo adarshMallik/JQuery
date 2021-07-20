@@ -1,0 +1,110 @@
+<!-- fadeIn fadeout using js -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        section{
+            border: 1px solid blue;
+            margin-bottom: 30px;
+        }
+        h1{
+            background-color: chocolate;
+            height:40px;
+            margin: 0;
+        }
+        #icons{
+            float: right;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #para1{
+            transition: all 2s ease-in-out;
+            opacity: 1;
+            height: 70px;
+            
+        }
+        #para1.fade{
+            opacity: 0;
+            transition: all 2s ease-in-out;
+            height: 0px;
+            margin:0 auto;
+        }
+
+        #para2{
+            width: 100%;
+            height:70px;
+            margin:0 auto;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Fade TOGGLE animation<a>
+            <i class='fa fa-angle-double-up out' id="icons"></i>
+            </a></h1>
+    <p id="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores amet harum sequi ut animi eum dolorum dolor blanditiis et laboriosam!</p>
+    </section>
+
+    <section>
+        <h1>Slide TOGGLE/up/down animation<a><i class='fa fa-angle-double-down slideDown' id="icons"></i>
+            <i class='fa fa-angle-double-up slideUp' id="icons"></i>
+            <i class='fa fa-arrows-v slidetoggle' id="icons"></i></a></h1>
+    
+    <p id="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores amet harum sequi ut animi eum dolorum dolor blanditiis et laboriosam!</p>
+    </section>
+ 
+ 
+    <script>
+       //fadein and fade out
+     let togglePara = document.querySelector("#para1");
+
+     document.getElementsByClassName("out")[0].addEventListener("click", function(){
+          togglePara.classList.toggle('fade');
+     })
+
+    let slideSource = document.getElementById("para2");
+    document.getElementsByClassName('slideUp')[0].addEventListener('click',slideup)
+    document.getElementsByClassName('slideDown')[0].addEventListener('click',slidedown)
+    document.getElementsByClassName('slidetoggle')[0].addEventListener('click',slideToggle)
+    let isClicked = true;
+     function slideup(){
+        console.log("hello")
+        isClicked = false;
+        slideSource.style.transition ="all 2s ease-in-out"
+        slideSource.style.height = "0px"
+     }
+
+     function slidedown(){
+         isClicked = true
+        slideSource.style.transition ="all 2s ease-in-out"
+        slideSource.style.height = "70px" 
+    }
+
+    function slideToggle(){
+        console.log(isClicked)
+        if(isClicked == true)
+        {
+            slideup()
+        }
+        else if(isClicked == false)
+        {
+            slidedown()
+        }
+    }
+
+
+  
+
+     
+    </script>
+</body>
+</html>
