@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Jquery and JS events</title>
+</head>
+<body>
+ <div style="padding: 20OX;border: 2px solid black;">
+     <h3>JQUERY EVENTS</h3>
+    <button id="clickEvent">
+        Click me
+    </button>
+
+    <p class="events">
+        press and release on this text using mouse key to see mouse up and down event
+    </p>
+
+    <p class="events1">
+      mouseover to see the effect mouseout will make the paragraph hide
+    </p>
+
+    <button id="keyEvent">
+        Press Any Key
+    </button>
+
+    <button id="keyEvent1">
+        Press Any Key
+    </button>
+    <label style="display: block;margin-top: 10px;">Name</label>
+    <input type="text" id="formEffect">
+
+    <div id="scrollEvent"  style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus unde officiis et? Pariatur cupiditate, quas officia nam nulla sint fuga veniam quisquam dolore a laudantium est earum dicta tenetur, voluptates provident similique dolores delectus tempora, molestias quis enim consequuntur accusantium. Inventore saepe veniam sint similique labore quia assumenda ratione? Reiciendis tenetur harum consequuntur, voluptatibus eos molestiae, eligendi commodi libero ea qui delectus iusto voluptatum nemo dicta exercitationem dolor vel illo modi consequatur! Ullam, sint consectetur. Amet dolorem magni iure, earum quia laboriosam ab id inventore quasi ratione, corporis veritatis. Laudantium assumenda quam eum reiciendis. Pariatur debitis voluptatem consequatur sint, aperiam voluptate enim rem libero dignissimos odio expedita exercitationem et quae laboriosam, ratione dicta quis quo nisi eveniet necessitatibus amet corporis, adipisci at? Numquam illum libero mollitia. Velit, pariatur tempora. Exercitationem quod id alias doloremque pariatur, cumque repudiandae nobis iure dolorem sapiente quam, blanditiis laudantium. Eos, vitae laudantium. Porro molestias officiis explicabo ducimus voluptatem, id, ipsa deserunt, fuga architecto quo suscipit obcaecati officia fugiat modi repudiandae. Tempora possimus beatae impedit dignissimos saepe, odit consequatur amet ducimus assumenda distinctio, vel esse expedita? Atque labore deleniti illo quidem tempora suscipit odit voluptas non molestias fugiat, quia soluta asperiores repudiandae consectetur voluptatibus, enim laboriosam tempore fugit. Assumenda ratione inventore aperiam reprehenderit itaque cumque quod similique provident dicta eos. Animi quidem fuga, omnis amet maxime aperiam recusandae quo tenetur voluptas repudiandae. Quisquam rerum excepturi harum suscipit fugit laudantium eius aperiam odio ullam saepe aliquam sequi repudiandae placeat et veniam, obcaecati tempora necessitatibus, aliquid minima sit nesciunt exercitationem laborum totam possimus? At, nemo rem repudiandae, modi possimus magnam illo ipsum cumque, hic perspiciatis inventore reiciendis aliquam quidem! Reiciendis, temporibus ullam totam hic architecto velit quasi provident explicabo dolore eum magni facere voluptatibus laborum sunt, quod accusantium, nisi id ipsa nemo. Doloribus tempore inventore at veritatis magni asperiores impedit quasi eveniet quos laudantium. Dolor sapiente inventore harum nihil quo mollitia veniam rem porro iste nisi? Excepturi nesciunt quasi, voluptates perferendis soluta quae adipisci aliquam culpa temporibus provident magnam et numquam tenetur enim impedit quos. Eius, autem dolor alias quasi corporis atque deserunt maxime voluptatum sunt facere quibusdam hic, asperiores vero ut animi sint rerum, quos reprehenderit possimus. Quidem sint culpa, odit saepe suscipit blanditiis provident eveniet incidunt. Sapiente exercitationem eligendi corrupti eos eum sed doloribus, libero officia alias totam labore sit. Tempore hic blanditiis nisi laudantium quibusdam tenetur reiciendis nam est. Optio, odit illo. Nobis ab cum cupiditate. Cumque tempore non accusamus est numquam laborum nostrum vero ex mollitia. Quasi, harum excepturi, ratione quaerat, sint possimus quia consectetur incidunt ad qui pariatur nihil mollitia quidem. Illum accusamus magnam impedit possimus ea omnis maiores corporis obcaecati asperiores eius fugit, debitis nostrum soluta eos quod, necessitatibus ex tenetur ratione. Excepturi fugiat suscipit error, nihil est dignissimos. Minus vel numquam ipsam temporibus similique, repellendus vitae itaque corrupti velit reprehenderit tempora soluta, illo odit eligendi tempore delectus amet, fugiat repudiandae id. Illum veniam aut pariatur neque? Nulla, aut. Earum maxime pariatur quis, illo architecto temporibus aperiam eius hic debitis corrupti quisquam.
+    </div>
+    <p><b>Scrolled </b><span></span>  lines</p> 
+    <h3> Resize window to see the result</h3>
+
+    <p><b>Resize </b><span id="count"></span>  lines</p>
+
+    <h1 id="onload"> This text background changes when window gets loaded</h1>
+</div>
+<div style="padding: 20px;border: 2px solid black; margin-top: 50px;">
+    <h3>Javascript EVENTS</h3>
+
+    <button id="jsClick">
+        Click me 
+    </button>
+
+    <button id="jsmouseEvent">
+        Mouse/leave/enter
+    </button>
+
+    <p id="mouseUpDown">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, voluptatibus?
+    </p>
+
+    <button id="jskeyPress">
+        Click me 
+    </button>
+
+    <div id="jsscrollEvent"  style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus unde officiis et? Pariatur cupiditate, quas officia nam nulla sint fuga veniam quisquam dolore a laudantium est earum dicta tenetur, voluptates provident similique dolores delectus tempora, molestias quis enim consequuntur accusantium. Inventore saepe veniam sint similique labore quia assumenda ratione? Reiciendis tenetur harum consequuntur, voluptatibus eos molestiae, eligendi commodi libero ea qui delectus iusto voluptatum nemo dicta exercitationem dolor vel illo modi consequatur! Ullam, sint consectetur. Amet dolorem magni iure, earum quia laboriosam ab id inventore quasi ratione, corporis veritatis. Laudantium assumenda quam eum reiciendis. Pariatur debitis voluptatem consequatur sint, aperiam voluptate enim rem libero dignissimos odio expedita exercitationem et quae laboriosam, ratione dicta quis quo nisi eveniet necessitatibus amet corporis, adipisci at? Numquam illum libero mollitia. Velit, pariatur tempora. Exercitationem quod id alias doloremque pariatur, cumque repudiandae nobis iure dolorem sapiente quam, blanditiis laudantium. Eos, vitae laudantium. Porro molestias officiis explicabo ducimus voluptatem, id, ipsa deserunt, fuga architecto quo suscipit obcaecati officia fugiat modi repudiandae. Tempora possimus beatae impedit dignissimos saepe, odit consequatur amet ducimus assumenda distinctio, vel esse expedita? Atque labore deleniti illo quidem tempora suscipit odit voluptas non molestias fugiat, quia soluta asperiores repudiandae consectetur voluptatibus, enim laboriosam tempore fugit. Assumenda ratione inventore aperiam reprehenderit itaque cumque quod similique provident dicta eos. Animi quidem fuga, omnis amet maxime aperiam recusandae quo tenetur voluptas repudiandae. Quisquam rerum excepturi harum suscipit fugit laudantium eius aperiam odio ullam saepe aliquam sequi repudiandae placeat et veniam, obcaecati tempora necessitatibus, aliquid minima sit nesciunt exercitationem laborum totam possimus? At, nemo rem repudiandae, modi possimus magnam illo ipsum cumque, hic perspiciatis inventore reiciendis aliquam quidem! Reiciendis, temporibus ullam totam hic architecto velit quasi provident explicabo dolore eum magni facere voluptatibus laborum sunt, quod accusantium, nisi id ipsa nemo. Doloribus tempore inventore at veritatis magni asperiores impedit quasi eveniet quos laudantium. Dolor sapiente inventore harum nihil quo mollitia veniam rem porro iste nisi? Excepturi nesciunt quasi, voluptates perferendis soluta quae adipisci aliquam culpa temporibus provident magnam et numquam tenetur enim impedit quos. Eius, autem dolor alias quasi corporis atque deserunt maxime voluptatum sunt facere quibusdam hic, asperiores vero ut animi sint rerum, quos reprehenderit possimus. Quidem sint culpa, odit saepe suscipit blanditiis provident eveniet incidunt. Sapiente exercitationem eligendi corrupti eos eum sed doloribus, libero officia alias totam labore sit. Tempore hic blanditiis nisi laudantium quibusdam tenetur reiciendis nam est. Optio, odit illo. Nobis ab cum cupiditate. Cumque tempore non accusamus est numquam laborum nostrum vero ex mollitia. Quasi, harum excepturi, ratione quaerat, sint possimus quia consectetur incidunt ad qui pariatur nihil mollitia quidem. Illum accusamus magnam impedit possimus ea omnis maiores corporis obcaecati asperiores eius fugit, debitis nostrum soluta eos quod, necessitatibus ex tenetur ratione. Excepturi fugiat suscipit error, nihil est dignissimos. Minus vel numquam ipsam temporibus similique, repellendus vitae itaque corrupti velit reprehenderit tempora soluta, illo odit eligendi tempore delectus amet, fugiat repudiandae id. Illum veniam aut pariatur neque? Nulla, aut. Earum maxime pariatur quis, illo architecto temporibus aperiam eius hic debitis corrupti quisquam.
+     </div>
+     <p><b>Scrolled </b><span id="jsScrollCount"></span>  lines</p> 
+
+     <label style="display: block;margin-top: 10px;">Name</label>
+    <input type="text" id="jsformEffect">
+
+    <h3> Resize window to see the result</h3>
+
+    <p><b>Resize </b><span id="jscount"></span>  lines</p>
+</div>
+        
+    <script>
+       /* <!-- mouseevents
+        scroll,click,mousedown,mouseover,mouseout,mouseenter,mouseleave,load,resize,scroll -->
+         keyboard
+        keydown,keyup,keypress
+        form
+        submit,change,focus,blur */
+
+        // javascript
+
+        //DOM ELEMENTS
+
+        let jsClick = document.getElementById('jsClick');
+        let jsmouseEvent = document.getElementById('jsmouseEvent');
+        let mouseUpDown = document.getElementById('mouseUpDown');
+        let jskeyPress = document.getElementById('jskeyPress');
+        let jsscrollEvent = document.getElementById('jsscrollEvent');
+        let jsScrollCount = document.getElementById('jsScrollCount');
+        let jsformEffect = document.getElementById('jsformEffect')
+        let jscount = document.getElementById('jscount')
+
+        jsClick.onclick = function(){
+            jsClick.style.backgroundColor = "red"
+        }
+
+        jsmouseEvent.onmouseleave = function(){
+            jsmouseEvent.style.backgroundColor = "red"
+        }
+
+        jsmouseEvent.onmouseenter = function(){
+            jsmouseEvent.style.backgroundColor = "green"
+        }
+
+        mouseUpDown.onmouseup = function(){
+            mouseUpDown.style.backgroundColor = "green"
+        }
+
+        mouseUpDown.onmousedown = function(){
+            mouseUpDown.style.backgroundColor = "red"
+        }
+
+        mouseUpDown.onmouseover = function(){
+            mouseUpDown.style.backgroundColor = "yellow"
+        }
+
+        jskeyPress.onkeyup  = function(){
+            jskeyPress.style.backgroundColor = "pink"
+        }
+
+        jskeyPress.onkeydown  = function(){
+            jskeyPress.style.backgroundColor = "blue"
+        }
+         var y=0;
+        jsscrollEvent.onscroll = function(){
+            jsScrollCount.innerHTML = y += 1
+        }
+
+        jsformEffect.onfocus  = function(){
+            jsformEffect.style.backgroundColor = "green"
+        }
+
+        jsformEffect.onblur  = function(){
+            jsformEffect.style.backgroundColor = "red"
+        }
+
+        window.onresize = function(){
+            jscount.innerText = y += 1
+        }
+        
+
+         // Jquery
+
+         $('#clickEvent').click(function(){
+             window.location.href = "https://www.achieversit.com/"
+         })
+
+         $('#clickEvent').mouseenter(function(){
+             $(this).css("background-color","red");
+         })
+
+         $('#clickEvent').mouseleave(function(){
+             $(this).css("background-color","green");
+         })
+
+         $('.events').mousedown(function(){
+             $(this).css("background-color","yellow");
+         })
+
+         $('.events').mouseup(function(){
+             $(this).css("background-color","pink");
+         })
+
+         $('.events1').mouseover(function(){
+            $(this).css("background-color","pink");
+         })
+
+         $('.events1').mouseout(function(){
+             $(this).hide();
+         })
+
+        //  keyboard
+        // keydown,keyup,keypress
+
+        $('#keyEvent').keyup(function(){
+            $(this).css("background-color","red");
+        })
+
+        $('#keyEvent').keydown(function(){
+            $(this).css("background-color","green");
+        })
+
+        $('#keyEvent1').keypress(function(){
+            $(this).css("background-color","yellow");
+        })
+         
+        //Form Events
+
+        $('#formEffect').focus(function(){
+            $(this).css("background-color","yellow");
+        })
+
+        $('#formEffect').blur(function(){
+            $(this).css("background-color","green");
+        })
+
+        var x=0;
+        $('#scrollEvent').scroll(function(){
+           
+            $('span').text(x+=1) 
+        })
+
+        $(window).resize(function(){
+           
+           $('#count').text(x+=1) 
+       })
+
+       $(window).on('load',function(){
+           $('#onload').css("background-color","red");
+       })
+
+       
+        
+
+
+
+
+
+
+
+         
+
+
+
+    </script>
+</body>
+</html>
