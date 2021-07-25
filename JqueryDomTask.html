@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+
+    <script>
+        //before() insertBefore()
+        //remove()
+        //wrap() wrapAll()
+
+        // step1 Append a section which is a parent element
+        $('body').append('<section></section>')
+        // append a chilc element inside parent
+        $('section').append('<div></div>')
+        // creating multiple div using clone
+
+        $('div').text('This is a div')
+        $('div').append('<p>this paragraph is created to be removed')
+
+        //attr get or sets the value of specified attribute
+        $('div').attr('id','oldDiv')
+         
+        // after 
+        $('#oldDiv').after('<div style="background-color:yellow"> New Div after old Div</div>')
+    
+        //before
+        $('#oldDiv').before('<div style="background-color:lightblue"> New Div before old Div</div>')
+
+        //prepend add text or new element at the starting of an old element
+        $('#oldDiv').prepend('<b>This is a prepended value </b>')
+
+        // remove is used to remove any element
+
+        $('p').remove();
+
+        //replace all 
+        //it is used to replace a particular element with new element;
+        $('#oldDiv').append('<p>this is a paragraph</p>')
+
+        //Appendto is same as append above but the writing is opposite first the content and then the element
+        $('<p>this is a paragraph</p>').appendTo('#oldDiv')
+
+        $('<span style="display:block">This span is replacing the paragraph</span>').replaceAll('p')
+
+        // Wrap :  is used to wrap a given element with another element
+
+        $('span').wrap('<p>this is a pragraph wrapping a span tag</p>')
+
+        // prop is used to set or get value of specified property
+
+        $('span').prop('class',"newSpan");
+        //get style value using prop
+        let style = $('.newSpan').prop('style')
+        console.log(style.display)  // returns block which is already given style to the span element
+
+
+        // html replaces all the current element and adds the given element
+
+        $('section').append('<div id="emptyDiv"></div>')
+        $('#emptyDiv').html('<p>This paragraph is added using html() method</p>')
+
+        $('section').append('<div id="normalDiv"></div>')
+        $('#normalDiv').append('<p>This paragraph is added using append method</p>')
+        $('#normalDiv').append('<p>This second paragraph is added using append method</p>')
+        $('#normalDiv').append('<p>This third paragraph is added using append method</p>')
+        $('#normalDiv').append('<div id="subNormalDiv">This is a child div</div>')
+        $('#normalDiv').css('margin-top','50px')
+        
+        
+          
+        // also provides the innerHtml content of the div
+        console.log( $('#emptyDiv').html())  //returns <p>This paragraph is added using html() method</p>
+
+        // text : sets or gets the text ibside an element
+        //get
+        console.log($('.newSpan').text())
+
+        //val returns value specified in the given element
+        $('#oldDiv').append('<input type="Submit" value="save"/>');
+
+        console.log($('input:Submit').val());
+
+        //height : sets and gets height of an element
+        //width : sets and gets width of an element
+
+        $('#emptyDiv').height(100);
+         //$('#emptyDiv').innerHeight(100);
+        //$('#emptyDiv').outerHeight(100);
+
+        $('#emptyDiv').width(100);
+
+        // Offset adjusts left and top position of an element
+
+        $('#emptyDiv').offset({left:100,top:300})
+
+        // each iterates through all the elements and displays all the selector elements 
+
+        $('p').each(function(index){
+            // console.log(`index is ${index} and the text is ` + $(this).text())
+        })
+        // displays all the child element of the selected parent element
+        $('#normalDiv').children().each(function (index){
+            // console.log($(this).html())
+        })
+
+        // find is used to find a specific element in a given tag
+
+        $('#emptyDiv').find('p').each(function (index) {
+            // console.log($(this).html())
+        })
+
+        // next is used to get the next sibling element of the selected div
+
+         console.log($('#emptyDiv').next().html());
+
+         // Parent is used to get immediate parent element complete content including the specific element selected
+
+         console.log($('#subNormalDiv').parent().html());
+
+         // siblings gets all the siblings of the specified dom elements
+
+         $('#subNormalDiv').siblings().css({"color":"green","border":"2px solid green"})
+
+         // add class adds a class on a given element
+
+         $('#subNormalDiv').addClass('yellowDiv')        
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+        
+
+        
+    </script>
+</body>
+</html>
