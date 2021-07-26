@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+            font-size: 1rem;
+            line-height: 2.15;
+            padding-left: .75em;
+            padding-right: .75em;
+        }
+
+        .card-registration .select-arrow {
+            top: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="h-100 bg-dark">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card card-registration my-4">
+                        <div class="row g-0">
+                            <div class="col-xl-6 d-none d-xl-block">
+                                <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img4.jpg"
+                                    alt="Sample photo" class="img-fluid"
+                                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">Student registration form</h3>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <h5 id="firstNamecheck" style="color: red;">
+                                                First Name is missing
+                                            </h5>
+                                            <div class="form-outline">
+                                                <input type="text" id="firstName"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example1m">First name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <h5 id="lastNamecheck" style="color: red;">
+                                                Last Name is missing
+                                            </h5>
+                                            <div class="form-outline">
+                                                <input type="text" id="lastName" class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example1n">Last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <h5 id="motherNamecheck" style="color: red;">
+                                                Mother Name is missing
+                                            </h5>
+                                            <div class="form-outline">
+                                                <input type="text" id="motherName"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example1m1">Mother's name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <h5 id="fatherNamecheck" style="color: red;">
+                                                Father Name is missing
+                                            </h5>
+                                            <div class="form-outline">
+                                                <input type="text" id="fatherName"
+                                                    class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example1n1">Father's name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <h5 id="addresscheck" style="color: red;">
+                                            Address is missing
+                                        </h5>
+                                        <input type="text" id="address" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example8">Address</label>
+                                    </div>
+
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                        <div class="form-outline mb-4">
+                                            <h5 id="gendercheck" style="color: red;">
+                                                Select a gender
+                                            </h5>
+                                        </div>
+                                        <h6 class="mb-0 me-4">Gender: </h6>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="gender"
+                                                id="femaleGender" value="option1" />
+                                            <label class="form-check-label" for="femaleGender">Female</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="gender"
+                                                id="maleGender" value="option2" />
+                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0">
+                                            <input class="form-check-input" type="radio" name="gender"
+                                                id="otherGender" value="option3" />
+                                            <label class="form-check-label" for="otherGender">Other</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+
+                                            <select class="select">
+                                                <option value="1">State</option>
+                                                <option value="2">Karnataka</option>
+                                                <option value="3">Tamil Nadu</option>
+                                                <option value="4">Andra Pradesh</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+
+                                            <select class="select">
+                                                <option value="1">City</option>
+                                                <option value="2">Banglore</option>
+                                                <option value="3">Chennai</option>
+                                                <option value="4">Hyderabad</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-outline mb-4">
+                                        <h5 id="coursecheck" style="color: red;">
+                                            Course is missing
+                                        </h5>
+                                        <input type="text" id="course" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example99">Course</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <h5 id="emailcheck" style="color: red;">
+                                            Email is missing
+                                        </h5>
+                                        <input type="text" id="email" class="form-control form-control-lg" />
+                                        <label class="form-label" for="form3Example97">Email ID</label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-end pt-3 d-block">
+                                        <button type="button" class="btn btn-warning btn-lg ms-2" id="submitButton">Submit form</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('#gendercheck').hide()
+        // validate first Name
+
+        $('#firstNamecheck').hide();
+        let firstNameError = true;
+
+        $('#firstName').blur(function () {
+            validateFirstname();
+        })
+
+        let validateFirstname = () => {
+            let firstNameValue = $('#firstName').val();
+            if (firstNameValue.length == '') {
+                $('#firstNamecheck').show();
+                firstNameError = false;
+                return false;
+            } else if (firstNameValue.length < 3 || firstNameValue > 10) {
+                $('#firstNamecheck').show();
+                $('#firstNamecheck').html('length of first name must be between 3 and 10');
+                firstNameError = false;
+                return false;
+            } else {
+                firstNameError = true;
+                $('#firstNamecheck').hide();
+            }
+
+        }
+
+        // validate last Name
+
+        $('#lastNamecheck').hide();
+        let lastNameError = true;
+
+        $('#lastName').blur(function () {
+            validateLastname();
+        })
+
+        let validateLastname = () => {
+            let lastNameValue = $('#lastName').val();
+            if (lastNameValue.length == '') {
+                $('#lastNamecheck').show();
+                lastNameError = false;
+                return false;
+            } else if (lastNameValue.length < 3 || lastNameValue > 10) {
+                $('#lastNamecheck').show();
+                $('#lastNamecheck').html('length of last name must be between 3 and 10');
+                lastNameError = false;
+                return false;
+            } else {
+                lastNameError = true
+                $('#lastNamecheck').hide();
+            }
+
+        }
+
+        //validate Mother name
+
+        $('#motherNamecheck').hide();
+        let motherNameError = true;
+
+        $('#motherName').blur(function () {
+            validateMothername();
+        })
+
+        let validateMothername = () => {
+            let motherNameValue = $('#motherName').val();
+            if (motherNameValue.length == '') {
+                $('#motherNamecheck').show();
+                motherNameError = false;
+                return false;
+            } else if (motherNameValue.length < 3 || motherNameValue > 10) {
+                $('#motherNamecheck').show();
+                $('#motherNamecheck').html('length of mother name must be between 3 and 10');
+                motherNameError = false;
+                return false;
+            } else {
+                motherNameError = true
+                $('#motherNamecheck').hide();
+            }
+
+        }
+
+        //validate Father name
+
+        $('#fatherNamecheck').hide();
+        let fatherNameError = true;
+
+        $('#fatherName').blur(function () {
+            validateFathername();
+        })
+
+        let validateFathername = () => {
+            let fatherNameValue = $('#fatherName').val();
+            if (fatherNameValue.length == '') {
+                $('#fatherNamecheck').show();
+                fatherNameError = false;
+                return false;
+            } else if (fatherNameValue.length < 3 || fatherNameValue > 10) {
+                $('#fatherNamecheck').show();
+                $('#fatherNamecheck').html('length of father name must be between 3 and 10');
+                fatherNameError = false;
+                return false;
+            } else {
+                fatherNameError = true
+                $('#fatherNamecheck').hide();
+            }
+
+        }
+
+        //validate address
+
+        $('#addresscheck').hide();
+        let addressError = true;
+
+        $('#address').blur(function () {
+            validateAddressname();
+        })
+
+        let validateAddressname = () => {
+            let addressValue = $('#address').val();
+            if (addressValue.length == '') {
+                $('#addresscheck').show();
+                addressError = false;
+                return false;
+            } else if (addressValue.length < 3 || addressValue > 20) {
+                $('#addresscheck').show();
+                $('#addresscheck').html('length of address must be between 3 and 20');
+                addressError = false;
+                return false;
+            } else {
+                addressError = true
+                $('#addresscheck').hide();
+            }
+
+        }
+
+        //validate course
+
+        $('#coursecheck').hide();
+        let courseError = true;
+
+        $('#course').blur(function () {
+            validatecoursename();
+        })
+
+        let validatecoursename = () => {
+            let courseValue = $('#course').val();
+            if (courseValue.length == '') {
+                $('#coursecheck').show();
+                courseError = false;
+                return false;
+            } else if (courseValue.length < 3 || courseValue > 10) {
+                $('#coursecheck').show();
+                $('#coursecheck').html('length of course must be between 3 and 10');
+                courseError = false;
+                return false;
+            } else {
+                courseError = true
+                $('#coursecheck').hide();
+            }
+
+        }
+
+        //validate email
+
+        $('#emailcheck').hide();
+        let emailError = true;
+
+        $('#email').blur(function () {
+            validateemail();
+        })
+        let regex =
+            /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+        let validateemail = () => {
+            let emailValue = $('#email').val();
+            if (emailValue.length == '') {
+                $('#emailcheck').show();
+                emailError = false;
+                return false;
+                // test is used to check wether email matches the regular expression
+            } else if (!regex.test(emailValue)) {
+                $('#emailcheck').show();
+                $('#emailcheck').html('Invalid email');
+                emailError = false;
+                return false;
+            } else {
+                emailError = true
+                $('#emailcheck').hide();
+            }
+
+        }
+
+
+        // Submit Button
+
+        $('#submitButton').click(function(){
+            
+            validateFirstname();
+            validateLastname();
+            validateMothername();
+            validateFathername();
+            validateAddressname();
+            validatecoursename();
+            validateemail();
+
+
+            let genderChecked = false;
+            genderChecked = $("input[name=gender]").is(":checked");
+             
+           if(genderChecked)
+           {
+            $("#gendercheck").hide()
+           }
+           else{
+            
+            $("#gendercheck").show()
+           }
+
+           if((firstNameError==true)&&(lastNameError == true)&&(fatherNameError = true)&&(emailError = true)&&(courseError = true)&&(motherNameError = true))
+           {
+               console.log(true)
+                alert("Form submitted successfully")
+                location.reload();
+           }
+        })
+    })
+</script>
